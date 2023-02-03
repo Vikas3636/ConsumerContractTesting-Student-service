@@ -1,13 +1,13 @@
-package com.testannotation.patientservice;
+package com.testannotation.studentservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PatientServiceApplication {
+public class StudentServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PatientServiceApplication.class, args);
+		SpringApplication.run(StudentServiceApplication.class, args);
 	}
 
 }

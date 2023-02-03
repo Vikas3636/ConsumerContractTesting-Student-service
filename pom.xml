@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.testannotation</groupId>
-	<artifactId>patient-service</artifactId>
+	<artifactId>student-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>patient-service</name>
-	<description>Patient Service</description>
+	<name>student-service</name>
+	<description>Student Service</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -65,6 +65,16 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-contract-stub-runner</artifactId>
+				<version>3.0.3</version>
+				<scope>test</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -82,7 +92,7 @@
 				<configuration>
 					<testFramework>JUNIT5</testFramework>
 					<testMode>MOCKMVC</testMode>
-					<baseClassForTests>com.testannotation.patientservice.BaseContractTest</baseClassForTests>
+					<baseClassForTests>com.testannotation.studentservice.BaseContractTest</baseClassForTests>
 				</configuration>
 			</plugin>
 		</plugins>

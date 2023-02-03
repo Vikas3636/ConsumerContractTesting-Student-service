@@ -1,18 +1,18 @@
-package com.testannotation.patientservice.model;
+package com.testannotation.studentservice.model;
 
-public class Patient {
-    private String MRN;
+public class Student {
+    private String ID;
     private String firstName;
     private String lastName;
     private String dateOfBirth;
     private String registrationDate;
 
-    public String getMRN() {
-        return MRN;
+    public String getID() {
+        return ID;
     }
 
-    public void setMRN(String MRN) {
-        this.MRN = MRN;
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
     public String getFirstName() {
@@ -57,11 +57,11 @@ public class Patient {
 
     private String address;
 
-    public Patient(){
+    public Student(){
 
     }
 
-    public Patient(String firstName, String lastName, String dateOfBirth, String registrationDate, String address) {
+    public Student(String firstName, String lastName, String dateOfBirth, String registrationDate, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
@@ -69,10 +69,10 @@ public class Patient {
         this.address = address;
     }
 
-    public Patient(String firstName, String lastName, String MRN, String dateOfBirth, String registrationDate, String address) {
+    public Student(String firstName, String lastName, String ID, String dateOfBirth, String registrationDate, String address) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.MRN = MRN;
+        this.ID = ID;
         this.dateOfBirth = dateOfBirth;
         this.registrationDate = registrationDate;
         this.address = address;

@@ -1,14 +1,12 @@
-package com.testannotation.patientservice;
+package com.testannotation.studentservice;
 
-import com.testannotation.patientservice.controller.PatientController;
+import com.testannotation.studentservice.controller.StudentController;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
-import io.restassured.module.mockmvc.config.RestAssuredMockMvcConfig;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.contract.verifier.messaging.boot.AutoConfigureMessageVerifier;
-import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder;
@@ -19,12 +17,12 @@ import org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder;
 public class BaseContractTest {
 
     @Autowired
-    private PatientController patientController;
+    private StudentController studentController;
 
     @BeforeEach
     public void setUp(){
         StandaloneMockMvcBuilder standaloneMockMvcBuilder
-                = MockMvcBuilders.standaloneSetup(patientController);
+                = MockMvcBuilders.standaloneSetup(studentController);
         RestAssuredMockMvc.standaloneSetup(standaloneMockMvcBuilder);
     }
 }

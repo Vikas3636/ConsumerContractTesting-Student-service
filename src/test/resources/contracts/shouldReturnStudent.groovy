@@ -1,12 +1,14 @@
+package contracts
+
 import org.springframework.cloud.contract.spec.Contract
 
 Contract.make {
-    description("Should return a patient")
+    description("Should return a Student")
     request {
         method GET()
-        url("/patient-service/patient"){
+        url("/student-service/student"){
             queryParameters {
-                parameter("MRN", "2009120401")
+                parameter("ID", "2020091701")
             }
         }
     }
@@ -21,7 +23,7 @@ Contract.make {
                 dateOfBirth: "02/02/1997",
                 registrationDate: "04/12/2009",
                 address: "15 Foreshore Road, Philadelphia, PA, 19101",
-                mrn: "2009120401"
+                id: "2020091701"
         )
     }
 
